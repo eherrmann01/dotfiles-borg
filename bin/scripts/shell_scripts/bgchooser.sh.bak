@@ -1,0 +1,100 @@
+#!/bin/sh
+#  ______      _ _      _____     _    _                                               _____
+# |  ____|    (_) |    |  __ \   | |  | |                                             / ____|
+# | |__   _ __ _| | __ | |  | |  | |__| | ___ _ __ _ __ _ __ ___   __ _ _ __  _ __   | (___  _ __
+# |  __| | '__| | |/ / | |  | |  |  __  |/ _ \ '__| '__| '_ ` _ \ / _` | '_ \| '_ \   \___ \| '__|
+# | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
+# |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
+
+# Wallpaper setting script using Nitrogen - Dual monitor version - updated 06/03/2025
+# ~/bin/scripts/shell_scripts/bgchooser.sh
+
+IMAGE_0="$1"
+CONFIG="$HOME/.config/nitrogen/bg-saved.cfg"
+BACKUP="$CONFIG.bak"
+
+# Check that an image was provided.
+[ -z "$IMAGE_0" ] && notify-send "Wallpaper not set" "No image selected." && exit 1
+
+# Ask which monitor to set wallpaper on: Right, Left, or Span both.
+LAYOUT=$(zenity --list --title="Wallpaper Layout - Monitor 1" --text="Choose layout mode:" \
+  --column="Option" "Span image across both monitors" "Set monitor Right" "Set monitor Left")
+
+[ -z "$LAYOUT" ] && notify-send "Wallpaper not set" "No layout selected." && exit 1
+
+# Assign human-readable labels to Nitrogen's mode numbers.
+get_mode_number() {
+  case "$1" in
+    "Scaled")       echo 0 ;;
+    "Tiled")        echo 1 ;;
+    "Centered")     echo 2 ;;
+    "Zoomed")       echo 3 ;;
+    "Automatic")    echo 4 ;;
+    "Zoomed Fill")  echo 5 ;;
+    *)              echo 4 ;;
+  esac
+}
+
+# Backup existing ~/.config/nitrogen/bg-saved.cfg.
+cp "$CONFIG" "$BACKUP"
+
+# Get mode preference for setting image to span both monitors.
+if [ "$LAYOUT" = "Span image across both monitors" ]; then
+  MODE_NAME=$(zenity --list --title="Wallpaper Mode" --column="Mode" \
+    "Scaled" "Tiled" "Centered" "Zoomed" "Automatic" "Zoomed Fill")
+  MODE=$(get_mode_number "$MODE_NAME")
+
+# Write config file for spanned monitors.
+  cat > "$CONFIG" <<EOF
+[xin_-1]
+file=$IMAGE_0
+mode=$MODE
+bgcolor=#000000
+EOF
+
+# Notify user with filename and mode.
+#notify-send "Wallpaper set" "$MODE_NAME: $(basename "$IMAGE_0"): $MODE_NAME"
+notify-send "Wallpaper set:" "$(basename "$IMAGE_0"), $MODE_NAME, Spanned"
+
+# Get mode preference for setting image to right monitor.
+elif
+  [ "$LAYOUT" = "Set monitor Right" ]; then
+  MODE_NAME=$(zenity --list --title="Wallpaper Mode" --column="Mode" \
+    "Scaled" "Tiled" "Centered" "Zoomed" "Automatic" "Zoomed Fill")
+  MODE=$(get_mode_number "$MODE_NAME")
+
+  [ -z "$IMAGE_0" ] && notify-send "Wallpaper not set" "No image selected for Right monitor." && exit 1
+
+# Write config file for Right monitor.
+  cat > "$CONFIG" <<EOF
+[xin_0]
+file=$IMAGE_0
+mode=$MODE
+bgcolor=#000000
+EOF
+notify-send "Wallpaper set:" "$(basename "$IMAGE_0"), Right Monitor, $MODE_NAME"
+
+# Get mode preference for setting image to left monitor.
+elif
+  [ "$LAYOUT" = "Set monitor Left" ]; then
+  MODE_NAME=$(zenity --list --title="Wallpaper Mode" --column="Mode" \
+    "Scaled" "Tiled" "Centered" "Zoomed" "Automatic" "Zoomed Fill")
+  MODE=$(get_mode_number "$MODE_NAME")
+  
+  [ -z "$IMAGE_0" ] && notify-send "Wallpaper not set" "No image selected for Left monitor." && exit 1
+
+# Write config file for Left monitor.
+  cat > "$CONFIG" <<EOF
+[xin_1]
+file=$IMAGE_0
+mode=$MODE
+bgcolor=#000000
+EOF
+notify-send "Wallpaper set:" "$(basename "$IMAGE_0"), Left Monitor, $MODE_NAME"
+
+fi
+
+# Reload Nitrogen with new config.
+nitrogen --restore
+
+exit 0

@@ -1,0 +1,4 @@
+#!/bin/bash
+# This file is used by xmenu
+
+nvim ~/.config/i3/config
