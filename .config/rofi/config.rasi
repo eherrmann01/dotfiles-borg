@@ -1,0 +1,44 @@
+configuration {
+    display-drun: "Applications";
+    display-window: "Windows";
+    show-icons: true;
+    font: "Ubuntu Mono Italic";
+    case-sensitive: false;    
+}
+
+
+
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+//@theme "/usr/share/rofi/themes/fullscreen-preview.rasi"
+
+//@theme "/usr/share/rofi/themes/Arc-Botticelli-transparent.rasi"
+
+//@theme "/usr/share/rofi/themes/Arc-Niagara.rasi"
+
+//@theme "/usr/share/rofi/themes/Adapta-Nokto.rasi"
+
+//@theme "/usr/share/rofi/themes/fancy.rasi"
+
+//@theme "~/.config/rofi/themes/fancy_edh.rasi"
+
+//@theme "/home/erik/.config/rofi/themes/studio7south.rasi"
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+//@theme "/home/erik/.config/rofi/themes/android_notification.rasi"
+
+//@theme "/home/erik/.config/rofi/themes/studio7south.rasi"
+
+//@theme "/home/erik/.config/rofi/themes/android_notification_edh.rasi"
+
+//@theme "/home/erik/.config/rofi/themes/android_notification_edh.rasi"
+
+//@theme "/home/erik/.config/rofi/themes/studio7south.rasi"
+
+//@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
+
+//@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
+
+@theme "/home/erik/.config/rofi/themes/glue_pro_blue_edh.rasi"

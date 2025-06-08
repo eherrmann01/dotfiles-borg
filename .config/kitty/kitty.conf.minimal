@@ -1,0 +1,78 @@
+#  ______      _ _      _____     _    _                                               _____
+# |  ____|    (_) |    |  __ \   | |  | |                                             / ____|
+# | |__   _ __ _| | __ | |  | |  | |__| | ___ _ __ _ __ _ __ ___   __ _ _ __  _ __   | (___  _ __
+# |  __| | '__| | |/ / | |  | |  |  __  |/ _ \ '__| '__| '_ ` _ \ / _` | '_ \| '_ \   \___ \| '__|
+# | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
+# |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
+
+# Kitty configuration file, - updated 05/10/2025
+# ~/.config/kitty/kitty.conf
+#
+: Terminal bell {{{
+ enable_audio_bell no
+#: The color table {{{
+#: black
+# color0 #000000
+# color8 #767676
+#: red
+# color1 #cc0403
+# color9 #f2201f
+#: green
+# color2  #19cb00
+# color10 #23fd00
+#: yellow
+# color3  #cecb00
+# color11 #fffd00
+# color4  #0d73cc
+#: blue
+# color12 #1a8fff
+#: magenta
+# color5  #cb1ed1
+# color13 #fd28ff
+#: cyan
+# color6  #0dcdcd
+# color14 #14ffff
+#: white
+# color7  #dddddd
+# color15 #ffffff
+
+# Check for updates
+update_check_interval 0
+# Font settings (ligatures are enabled by default if the font supports them)
+font_family      JetBrainsMono Nerd Font
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+font_size        16.0
+# Colors and transparency
+background       #1e1e2e
+foreground       #cdd6f4
+selection_background #44475a
+selection_foreground #f8f8f2
+cursor           #f8f8f2
+cursor_shape     block
+url_color        #8be9fd
+url_style        underline
+enable_audio_bell no
+visual_bell      yes
+# Transparency (use with a compositor like picom)
+background_opacity 0.90
+# Scrollback and tabs
+scrollback_lines 10000
+tab_bar_edge     bottom
+tab_bar_style    powerline
+active_tab_color #6272a4
+inactive_tab_color #44475a
+# Window appearance
+window_padding_width 5
+confirm_os_window_close 0
+# Image preview (enable sixel support)
+allow_hyperlinks yes
+enable_sixel     yes
+# Key mappings
+map ctrl+shift+enter new_window
+map ctrl+shift+t new_tab
+map ctrl+shift+w close_window
+map ctrl+shift+right next_tab
+map ctrl+shift+left previous_tab
+
