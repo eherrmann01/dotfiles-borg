@@ -1,0 +1,62 @@
+#   ______      _ _      _____     _    _                                               _____
+#  |  ____|    (_) |    |  __ \   | |  | |                                             / ____|
+#  | |__   _ __ _| | __ | |  | |  | |__| | ___ _ __ _ __ _ __ ___   __ _ _ __  _ __   | (___  _ __
+#  |  __| | '__| | |/ / | |  | |  |  __  |/ _ \ '__| '__| '_ ` _ \ / _` | '_ \| '_ \   \___ \| '__|
+#  | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
+#  |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
+
+# Alacritty configuration file, updated 01/01/2024
+
+
+[colors.bright]
+black = "0x1c1f24"
+blue = "#94bff3"
+cyan = "#93e0e3"
+green = "#8ae234"
+magenta = "#b294bb"
+red = "#fc5454"
+white = "#ffffff"
+yellow = "#fce94f"
+
+[colors.normal]
+black = "0x1c1f24"
+blue = "#94bff3"
+cyan = "#06989a"
+green = "#4e9a06"
+magenta = "#85678f"
+red = "#cc0000"
+white = "#dcdccc"
+yellow = "#c4a000"
+
+[colors.primary]
+background = "0x000000"
+foreground = "#F9F9F9"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "Ubuntu Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Ubuntu Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Ubuntu Mono"
+style = "Italic"
+
+[font.normal]
+family = "Ubuntu Mono"
+style = "Italic"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+[scrolling]
+history = 50000
+
+[window]
+opacity = 0.90
