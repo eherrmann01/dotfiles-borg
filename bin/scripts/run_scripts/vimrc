@@ -1,4 +1,0 @@
-#!/bin/bash
-# This file is used for xmenu
-
-nvim ~/.vimrc

@@ -33,7 +33,7 @@ background = "0x000000"
 foreground = "#F9F9F9"
 
 [font]
-size = 14.0
+size = 16.0
 
 [font.bold]
 family = "Ubuntu Mono"
@@ -59,4 +59,4 @@ key = "F11"
 history = 50000
 
 [window]
-opacity = 0.90
+opacity = 0.70

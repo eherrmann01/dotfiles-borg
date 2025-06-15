@@ -1,4 +1,0 @@
-#!/bin/bash
-# This file is used by xmenu
-
-nvim ~/.zsh_aliases
