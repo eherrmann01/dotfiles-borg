@@ -66,7 +66,8 @@ alias ports="ss -r -t -p"
 alias nitro='nitrogen --restore'
 
 # Set wacom tablet area
-alias wacom='xsetwacom --set "14" area 0 0 3040 2050'
+# alias wacom='xsetwacom --set "14" Area 0 0 3040 2050'
+alias wacom='xsetwacom --set "Wacom Intuos S Pad pad" Area 0 0 3040 2050'  
 
 # Config for git_dotfile_repo
 alias gg='/usr/bin/git --git-dir=$HOME/dotfiles-borg/ --work-tree=$HOME'

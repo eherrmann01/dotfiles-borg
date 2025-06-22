@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# i3 configuration file for erik-borg - updated 06/14/2025
+# i3 configuration file for erik-borg - updated 06/21/2025
 # ~/config/i3/config
 
 ## Set Super key / Define movement keys ##
@@ -289,13 +289,13 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-## ArcoLinux Logout ##
+## ArchLinux Logout ##
 bindsym $mod+Shift+e exec --no-startup-id archlinux-logout
 bindsym $mod+X exec --no-startup-id archlinux-logout
 
 ## Media Keys ##
 bindcode 191 exec --no-startup-id archlinux-logout
-bindcode 192 exec --no-startup-id ~/bin/xmenu/xmenu.sh
+bindcode 192 exec --no-startup-id ~/bin/scripts/shell_scripts/appmenu.sh
 bindcode 193 exec --no-startup-id rofi -show drun
 bindcode 194 exec --no-startup-id xfce4-settings-manager
 
@@ -321,7 +321,7 @@ font pango:Noto Mono Regular 13
 # Start Nitrogen
 exec --no-startup-id i3-msg exec 'nitrogen --restore'
 # Start browser on ws1 - EDH
-exec --no-startup-id bash -c 'sleep 1 && i3-msg "workspace $ws1; exec brave"'
+exec --no-startup-id bash -c 'sleep 1 && i3-msg "workspace $ws1; exec zen-browser"'
 # Start Barrier - EDH
 # exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/barrier --no-tray'
 #exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/input-leap --no-tray'
@@ -413,8 +413,8 @@ bindsym $mod+g exec --no-startup-id grayjay
 # Zoho-mail
 bindsym $mod+z exec --no-startup-id /usr/bin/zoho-mail-desktop ;focus
 # Brave
-bindsym $mod+F3 exec --no-startup-id zen-browser;focus
-bindsym $mod+w exec --no-startup-id brave;focus
+bindsym $mod+F3 exec --no-startup-id brave;focus
+bindsym $mod+w exec --no-startup-id zen-browser;focus
 # Chromium
 bindsym control+mod1+g exec --no-startup-id chromium;focus
 # Open file manager
