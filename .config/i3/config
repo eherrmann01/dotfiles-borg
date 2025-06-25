@@ -28,10 +28,13 @@ set $ws0 10
 ## Monitor setup / Moving around / Window management ##
 # use this line to tell which monitor is on the right
 exec --no-startup-id xrandr --output DisplayPort-2 --right-of HDMI-A-0 --auto
+exec --no-startup-id ~/.screenlayout/triple.sh
 
-## my current setup ##
+# my current setup ##
 set $firstMonitor DisplayPort-2
 set $secondMonitor HDMI-A-0
+set $thirdMonitor DisplayPort-1
+
 workspace 1 output $firstMonitor
 workspace 2 output $secondMonitor
 workspace 3 output $firstMonitor
@@ -40,8 +43,8 @@ workspace 5 output $firstMonitor
 workspace 6 output $secondMonitor
 workspace 7 output $firstMonitor
 workspace 8 output $secondMonitor
-workspace 9 output $firstMonitor
-workspace 10 output $secondMonitor
+workspace 9 output $thirdMonitor
+workspace 10 output $thirdMonitor
 
 ## switch to workspace ##
 bindsym $mod+1 workspace 1
@@ -358,7 +361,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh &
 # Mousefix
 exec_always --no-startup-id ~/bin/scripts/shell_scripts/mousefix.sh &
 # Redshift
-exec_always --no-startup-id ~/bin/scripts/run_scripts/nightrc &
+exec_always --no-startup-id ~/bin/scripts/edit_scripts/nightrc &
 
 ## System applications ## 
 # exec --no-startup-id xfce4-power-manager &

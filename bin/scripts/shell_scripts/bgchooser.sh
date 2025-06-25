@@ -6,7 +6,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Wallpaper setting script using Nitrogen - Dual monitor version - updated 06/03/2025
+# Wallpaper setting script using Nitrogen - Triple monitor version - updated 06/24/2025
 # ~/bin/scripts/shell_scripts/bgchooser.sh
 
 IMAGE_0="$1"
@@ -18,7 +18,7 @@ BACKUP="$CONFIG.bak"
 
 # Prompt for layout
 LAYOUT=$(zenity --list --title="Wallpaper Layout" --text="Choose layout mode:" \
-  --column="Option" "Span image across both monitors" "Set monitor Right" "Set monitor Left")
+  --column="Option" "Span image across both monitors" "Set monitor Right" "Set monitor Center" "Set monitor Left")
 
 [ -z "$LAYOUT" ] && notify-send "Wallpaper not set" "No layout selected." && exit 1
 
@@ -99,9 +99,15 @@ EOF
     notify-send "Wallpaper set:" "$(basename "$IMAGE_0"), Right Monitor, $MODE_NAME"
     ;;
 
-  "Set monitor Left")
+  "Set monitor Center")
     remove_span_entry
     update_monitor_entry "[xin_1]" "$IMAGE_0" "$MODE"
+    notify-send "Wallpaper set:" "$(basename "$IMAGE_0"), Center Monitor, $MODE_NAME"
+    ;;
+
+  "Set monitor Left")
+    remove_span_entry
+    update_monitor_entry "[xin_2]" "$IMAGE_0" "$MODE"
     notify-send "Wallpaper set:" "$(basename "$IMAGE_0"), Left Monitor, $MODE_NAME"
     ;;
 esac
