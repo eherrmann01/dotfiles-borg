@@ -18,7 +18,7 @@ BACKUP="$CONFIG.bak"
 
 # Prompt for layout
 LAYOUT=$(zenity --list --title="Wallpaper Layout" --text="Choose layout mode:" \
-  --column="Option" "Span image across both monitors" "Set monitor Right" "Set monitor Center" "Set monitor Left")
+  --column="Option" "Span image across all monitors" "Set monitor Right" "Set monitor Center" "Set monitor Left")
 
 [ -z "$LAYOUT" ] && notify-send "Wallpaper not set" "No layout selected." && exit 1
 
@@ -83,7 +83,7 @@ update_monitor_entry() {
 
 # Handle layout options
 case "$LAYOUT" in
-  "Span image across both monitors")
+  "Span image across all monitors")
     cat > "$CONFIG" <<EOF
 [xin_-1]
 file=$IMAGE_0

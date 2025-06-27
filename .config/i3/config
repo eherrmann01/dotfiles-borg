@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# i3 configuration file for erik-borg - updated 06/21/2025
+# i3 configuration file for erik-borg - updated 06/25/2025
 # ~/config/i3/config
 
 ## Set Super key / Define movement keys ##
@@ -31,9 +31,9 @@ exec --no-startup-id xrandr --output DisplayPort-2 --right-of HDMI-A-0 --auto
 exec --no-startup-id ~/.screenlayout/triple.sh
 
 # my current setup ##
-set $firstMonitor DisplayPort-2
-set $secondMonitor HDMI-A-0
-set $thirdMonitor DisplayPort-1
+set $firstMonitor DisplayPort-2 # Center
+set $secondMonitor HDMI-A-0     # Left
+set $thirdMonitor DisplayPort-1 # Right
 
 workspace 1 output $firstMonitor
 workspace 2 output $secondMonitor
@@ -374,7 +374,7 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 # ArcoLinux Tweak Tool
 bindsym control+mod1+e exec --no-startup-id arcolinux-tweak-tool
 # VS code
-bindsym $mod+c exec --no-startup-id code
+# bindsym $mod+c exec --no-startup-id code
 # Conky
 #bindsym $mod+c exec --no-startup-id conky-toggle
 bindsym control+mod1+Next exec --no-startup-id conky-rotate -n
@@ -407,7 +407,10 @@ bindsym control+mod1+p exec --no-startup-id pamac-manager
 # Xkill
 bindsym --release $mod+Escape exec xkill
 ## Erik's custom keyboard shortcuts ##
-#Chromium
+# ChatGPT
+# bindsym $mod+c exec --no-startup-id /usr/bin/openai-chatgpt-nativefier
+bindsym $mod+c workspace $ws0; exec --no-startup-id "/usr/bin/openai-chatgpt-nativefier"
+# Chromium
 bindsym $mod+F1 exec --no-startup-id chromium ;focus
 # Virt-manaver
 bindsym $mod+v exec --no-startup-id virt-manager
@@ -439,7 +442,7 @@ bindsym $mod+F10 exec --no-startup-id spotify;focus
 # Ranger terminal file browser
 bindsym $mod+mod1+r exec --no-startup-id kitty -e "ranger";focus
 # Wikipedia
-bindsym Control+$mod+w exec --no-startup-id /usr/bin/wike;focus
+bindsym Control+$mod+w workspace $ws9; exec --no-startup-id /usr/bin/wike ;focus
 ## Screenshots
 bindsym Print exec --no-startup-id scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
 bindsym Control+Print exec --no-startup-id xfce4-screenshooter
