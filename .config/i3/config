@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# i3 configuration file for erik-borg - updated 06/25/2025
+# i3 configuration file for erik-borg - updated 06/28/2025
 # ~/config/i3/config
 
 ## Set Super key / Define movement keys ##
@@ -319,16 +319,12 @@ bindsym $mod+q kill
 font pango:Noto Mono Regular 13
 
 ## Programs to load at startup ##
-#Start mail on ws2 - EDH
-#exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/thunderbird'
 # Start Nitrogen
 exec --no-startup-id i3-msg exec 'nitrogen --restore'
-# Start browser on ws1 - EDH
+# Start browser on ws1 
 exec --no-startup-id bash -c 'sleep 1 && i3-msg "workspace $ws1; exec zen-browser"'
-# Start Barrier - EDH
-# exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/barrier --no-tray'
-#exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/input-leap --no-tray'
-exec --no-startup-id i3-msg 'workspace 1; exec  /usr/bin/deskflow-server -f --debug INFO --name borg --address :24800 -c /home/erik/.config/Deskflow/deskflow-server.conf'
+# Start Deskflow
+exec --no-startup-id i3-msg 'workspace 1; exec  /usr/bin/deskflow-server -f --debug INFO --name borg --address :24800 -c /home/erik/.config/Deskflow/deskflow-server.conf' 
 # Autotiling
 exec_always --no-startup-id autotiling -l 2
 # Load Unclutter to autohide mouse
@@ -339,10 +335,10 @@ exec --no-startup-id clipmenud
 ## Tray applications ##
 # Authentication dialog
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-# Updater
-exec --no-startup-id pamac-tray
 # Bluetooth
 exec --no-startup-id blueberry-tray
+# Start Deskflow tray app
+exec --no-startup-id deskflow
 # Network
 exec --no-startup-id nm-applet
 # Num lock activated
@@ -373,12 +369,6 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 ## Application keyboard shortcuts ##
 # ArcoLinux Tweak Tool
 bindsym control+mod1+e exec --no-startup-id arcolinux-tweak-tool
-# VS code
-# bindsym $mod+c exec --no-startup-id code
-# Conky
-#bindsym $mod+c exec --no-startup-id conky-toggle
-bindsym control+mod1+Next exec --no-startup-id conky-rotate -n
-bindsym control+mod1+Prior exec --no-startup-id conky-rotate -p
 # Terminal
 bindsym $mod+Return exec --no-startup-id kitty;focus
 bindsym $mod+shift+Return exec --no-startup-id alacritty;focus
@@ -387,8 +377,6 @@ bindsym F12 exec --no-startup-id xfce4-terminal --drop-down; focus
 bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
 # Settings
 bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
-# Catfish
-# bindsym control+mod1+c exec --no-startup-id catfish;focus
 # Cliphist add
 bindsym control+mod1+c exec --no-startup-id ~/bin/scripts/shell_scripts/cliphist.sh add
 # Cliphist copy
@@ -406,9 +394,9 @@ bindsym control+mod1+a exec --no-startup-id xfce4-appfinder
 bindsym control+mod1+p exec --no-startup-id pamac-manager
 # Xkill
 bindsym --release $mod+Escape exec xkill
+
 ## Erik's custom keyboard shortcuts ##
 # ChatGPT
-# bindsym $mod+c exec --no-startup-id /usr/bin/openai-chatgpt-nativefier
 bindsym $mod+c workspace $ws0; exec --no-startup-id "/usr/bin/openai-chatgpt-nativefier"
 # Chromium
 bindsym $mod+F1 exec --no-startup-id chromium ;focus
