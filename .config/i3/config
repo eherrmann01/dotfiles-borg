@@ -162,7 +162,7 @@ for_window [class="Hexchat"] floating disable
 for_window [class="Imagewriter"] floating enable
 for_window [class="Font-manager"] floating enable
 # for_window [class="qt5ct|Lxappearance] floating enable
-for_window [class="Nitrogen"] floating disable
+for_window [class="Nitrogen"] floating enable
 for_window [class="Pavucontrol"] floating disable
 for_window [class="Peek"] floating enable
 for_window [class="^Skype$"] floating enable
@@ -320,7 +320,7 @@ font pango:Noto Mono Regular 13
 
 ## Programs to load at startup ##
 # Dropbox
-exec --no-startup-id dropbox start &
+#exec --no-startup-id dropbox start &
 # Start Nitrogen
 exec --no-startup-id i3-msg exec 'nitrogen --restore'
 # Start browser on ws1 

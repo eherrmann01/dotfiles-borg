@@ -5,7 +5,7 @@
 #  | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 #  |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 # 
-# Zsh aliases for erik-borg, updated 06/22/2025
+# Zsh aliases for erik-borg, updated 07/07/2025
 # ~/.zsh_aliases
 
 # Jump to scripts directory
@@ -71,6 +71,8 @@ alias wacom='xsetwacom --set "Wacom Intuos S Pad pad" Area 0 0 3040 2050'
 
 # Config for git_dotfile_repo
 alias gg='/usr/bin/git --git-dir=$HOME/dotfiles-borg/ --work-tree=$HOME'
+alias ggs='gg status'
+alias gga='gg add -u'
 
 # Redshift
 alias night='redshift-gtk -l 30.47741:-90.96232 &'
@@ -98,7 +100,7 @@ alias bt='bashtop'
 alias cl='clear'
 
 # Neofetch
-alias neo='neofetch'
+alias fast='fastfetch'
 
 # Set audio balance
 alias vol='pactl set-sink-volume 0 60% 50%'
