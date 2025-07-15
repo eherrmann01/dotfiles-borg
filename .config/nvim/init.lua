@@ -53,6 +53,7 @@ require('lazy').setup {
     require 'plugins.neogit',
     require 'plugins.neotree',
     require 'plugins.telescope',
+    require 'plugins.markdown',
     require 'plugins/themes.nord', -- To change theme, put the theme in /lua/plugins/themes and change the name here.
     -- require 'plugins/themes.zenbones',
     require 'plugins.todo-comments',

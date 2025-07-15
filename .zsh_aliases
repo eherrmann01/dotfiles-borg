@@ -73,6 +73,7 @@ alias wacom='xsetwacom --set "Wacom Intuos S Pad pad" Area 0 0 3040 2050'
 alias gg='/usr/bin/git --git-dir=$HOME/dotfiles-borg/ --work-tree=$HOME'
 alias ggs='gg status'
 alias gga='gg add -u'
+alias ggp='gg push'
 
 # Redshift
 alias night='redshift-gtk -l 30.47741:-90.96232 &'
