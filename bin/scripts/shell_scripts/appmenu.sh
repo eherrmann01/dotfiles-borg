@@ -171,7 +171,6 @@ Deskflow\n\
 File Search\n\
 Flameshot\n\
 Gparted\n\
-HTOP\n\
 LXAppearance\n\
 Timeshift\n\
 Tweaks\n\
@@ -185,7 +184,6 @@ Back\n" | $DMENU )
             "File Search") exec catfish ;;
             "Flameshot") exec flameshot ;;
             "Gparted") exec gparted ;;
-            "HTOP") exec kitty -e htop ;;
             "LXAppearance") exec lxappearance ;;
             "Timeshift") exec timeshift-launcher ;;
             "Tweaks") exec archlinux-tweak-tool ;;
