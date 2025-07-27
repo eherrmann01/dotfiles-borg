@@ -29,6 +29,17 @@ vim.cmd [[
   augroup END
 ]]
 
+vim.diagnostic.config {
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = '', -- You can use ⛔ or any icon
+            [vim.diagnostic.severity.WARN] = '',
+            [vim.diagnostic.severity.INFO] = '',
+            [vim.diagnostic.severity.HINT] = '',
+        },
+    },
+}
+
 vim.opt.rtp:prepend(lazypath)
 vim.g.zenbones_compat = 1
 -- vim.cmd.colorscheme 'zenbones'

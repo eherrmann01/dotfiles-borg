@@ -9,15 +9,17 @@
 # Install script to restore packages after system reinstall, updated 11/03/2024
 # ~/bin/scripts/packages/install_packages.sh
 
-input_file=$(find ~/ -name 'pkglist.txt')
+# Find the most recent package list file
+input_file=$(find ~/ -maxdepth 2 -name 'pkglist_*.txt' -print0 | xargs -0 ls -1t | head -n1)
 
-if [[ ! -f "$input_file" ]]; then
+if [[ -z "$input_file" || ! -f "$input_file" ]]; then
     echo "Package list not found, please check path"
     exit 1
 fi
 
-echo "installing packages from $input_file..."
+echo "Installing packages from $input_file..."
 
+# Use sudo with pacman to install packages, ignoring already installed ones
 sudo pacman -S --needed - < "$input_file"
 
-echo "All packages from $input_file have been installed"
+echo "All packages from $input_file have been installed."

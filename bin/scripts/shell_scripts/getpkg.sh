@@ -6,13 +6,13 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Script to generate a list of all installed packages on Arch Linux, Updated 05/24/2025
+# Script to generate a list of all installed packages on Arch Linux, Updated 07/19/2025
 # ~/bin/scripts/shell_scripts/getpkg.sh
 
 # Set output file name and location
-output_file="$HOME/bin/scripts/packages/pkglist.txt"
+output_file="$HOME/Documents/pkglist_$(date +%m-%d-%Y).txt"
 
-# Get list of install3ed packages and their dependancies
+# Get list of installed packages and their dependancies
 echo "Generating list of installed packages..."
 pacman -Qqe > "$output_file"
 

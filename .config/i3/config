@@ -319,8 +319,8 @@ bindsym $mod+q kill
 font pango:Noto Mono Regular 13
 
 ## Programs to load at startup ##
-# Dropbox
-#exec --no-startup-id dropbox start &
+# Run floating.py to resize windows when floating
+exec no-startup-id ~/bin/scripts/python_scripts/floating.py
 # Start Nitrogen
 exec --no-startup-id i3-msg exec 'nitrogen --restore'
 # Start browser on ws1 
