@@ -42,7 +42,7 @@ workspace 4 output $secondMonitor
 workspace 5 output $firstMonitor
 workspace 6 output $secondMonitor
 workspace 7 output $firstMonitor
-workspace 8 output $secondMonitor
+workspace 8 output $thirdMonitor
 workspace 9 output $thirdMonitor
 workspace 10 output $thirdMonitor
 
@@ -297,10 +297,10 @@ bindsym $mod+Shift+e exec --no-startup-id archlinux-logout
 bindsym $mod+X exec --no-startup-id archlinux-logout
 
 ## Media Keys ##
-bindcode 191 exec --no-startup-id archlinux-logout
-bindcode 192 exec --no-startup-id ~/bin/scripts/shell_scripts/appmenu.sh
-bindcode 193 exec --no-startup-id rofi -show drun
-bindcode 194 exec --no-startup-id xfce4-settings-manager
+#bindcode 191 exec --no-startup-id archlinux-logout
+#bindcode 192 exec --no-startup-id ~/bin/scripts/shell_scripts/appmenu.sh
+#bindcode 193 exec --no-startup-id rofi -show drun
+#bindcode 194 exec --no-startup-id xfce4-settings-manager
 
 ## Reloading changed configutarions ##
 # Restart i3 inplace (preserves layout/session, can be used to upgrade i3)
@@ -325,8 +325,10 @@ exec no-startup-id ~/bin/scripts/python_scripts/floating.py
 exec --no-startup-id i3-msg exec 'nitrogen --restore'
 # Start browser on ws1 
 exec --no-startup-id bash -c 'sleep 1 && i3-msg "workspace $ws1; exec brave"'
+# Start Keepass on ws8
+exec --no-startup-id bash -c 'sleep 2 && i3-msg "workspace $ws8; exec keepassxc"'
 # Start Deskflow
-exec --no-startup-id i3-msg 'workspace 1; exec  /usr/bin/deskflow-server -f --debug INFO --name borg --address :24800 -c /home/erik/.config/Deskflow/deskflow-server.conf' 
+# exec --no-startup-id i3-msg 'workspace 1; exec  /usr/bin/deskflow-server -f --debug INFO --name borg --address :24800 -c /home/erik/.config/Deskflow/deskflow-server.conf' 
 # Autotiling
 exec_always --no-startup-id autotiling -l 2
 # Load Unclutter to autohide mouse

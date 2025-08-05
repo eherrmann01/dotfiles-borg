@@ -17,6 +17,9 @@ alias rm='trash-put'
 # Batman (syntax hilighting for man pages)
 alias man='batman'
 
+# Bat instead of less
+alias less='bat'
+
 # Photo backup
 alias photo='sh photo_backup.sh'
 
