@@ -7,6 +7,9 @@
 # 
 # Zsh aliases for erik-borg, updated 07/07/2025
 # ~/.zsh_aliases
+ 
+# Launch llama llm
+alias llm='ollama run llama3.1'
 
 # Jump to scripts directory
 alias script='cd ~/bin/scripts/shell_scripts/'
@@ -104,7 +107,7 @@ alias bt='bashtop'
 alias cl='clear'
 
 # Neofetch
-alias fast='fastfetch'
+alias ff='fastfetch'
 
 # Set audio balance
 alias vol='pactl set-sink-volume 0 60% 50%'
@@ -119,10 +122,10 @@ alias proton='protonvpn-cli'
 alias live='live-server ~/Documents/coding/projects/s7s/ --host=127.0.0.1 --port=8000'
 
 # List
-alias ls='ls --color=auto'
+alias ls='eza --icons'
 alias la='ls -a'
-alias ll='ls -la'
-alias l='ls'
+alias ll='eza -la --icons --group-directories-first'
+alias l='eza --icons'
 # alias l.="ls -A | egrep '^\.'"
 alias l.="ls -A | grep -E '^\.'"
 
