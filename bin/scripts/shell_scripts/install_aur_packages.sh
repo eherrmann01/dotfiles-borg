@@ -6,11 +6,11 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Install script to restore packages after system reinstall, updated 08/16/2025
-# ~/bin/scripts/packages/install_packages.sh
+# Install script to restore packages form the AUR after system reinstall, updated 08/16/2025
+# ~/bin/scripts/packages/install_aur_packages.sh
 
 # Find the most recent package list file
-input_file=$(find ~/ -maxdepth 2 -type f -name 'packages*.txt' -printf '%T@ %p\n' \
+input_file=$(find ~/ -maxdepth 2 -type f -name 'aur_packages*.txt' -printf '%T@ %p\n' \
     | sort -nr \
     | head -n1 \
     | cut -d ' ' -f2-)
@@ -22,7 +22,7 @@ fi
 
 echo "Installing packages from $input_file..."
 
-# Use sudo with pacman to install packages, ignoring already installed ones
-sudo pacman -S --needed - < "$input_file"
+# Use yay to install AUR packages, ignoring already installed ones
+yay -S --needed $(< "$input_file")
 
 echo "All packages from $input_file have been installed."

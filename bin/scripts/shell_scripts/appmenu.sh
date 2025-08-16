@@ -86,6 +86,7 @@ Back\n" | $DMENU)
         choice=$(printf "Alacritty\n\
 App Menu\n\
 Bashrc\n\
+Fastfetch\n\
 I3\n\
 Imwheel\n\
 Kitty\n\
@@ -104,6 +105,7 @@ Back\n" | $DMENU)
         "Alacritty") exec kitty -e ~/bin/scripts/edit_scripts/edit_alacritty.sh ;;
         "App Menu") exec kitty -e ~/bin/scripts/edit_scripts/edit_appmenu.sh ;;
         "Bashrc") exec kitty -e ~/bin/scripts/edit_scripts/edit_bashrc.sh ;;
+        "Fastfetch") exec kitty -e ~/bin/scripts/edit_scripts/edit_fastfetch.sh ;;
         "I3") exec kitty -e ~/bin/scripts/edit_scripts/edit_i3.sh ;;
         "Imwheel") exec kitty -e ~/bin/scripts/edit_scripts/edit_imwheel.sh ;;
         "Kitty") exec kitty -e ~/bin/scripts/edit_scripts/edit_kitty.sh ;;
