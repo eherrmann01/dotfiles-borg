@@ -17,7 +17,7 @@ write() {
   notification=$(echo \"$multiline\") ;}
 
 sel() {
-    selection=$(tac "$histfile" | dmenu -l 5 -i -p "Clipboard history:" -nb '#191919' -nf '#5fb1ba' -sb '#5fb1ba' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14')
+    selection=$(tac "$histfile" | rofi -dmenu -l 5 -i -p "Clipboard history:" -nb '#191919' -nf '#5fb1ba' -sb '#5fb1ba' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14')
   [ -n "$selection" ] && echo "$selection" | sed "s/$placeholder/\n/g" | xclip -i -selection clipboard && notification="Copied to clipboard!" ;}
 
 case "$1" in

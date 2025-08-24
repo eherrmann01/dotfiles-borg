@@ -5,7 +5,7 @@
 #  | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 #  |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 # 
-# Zsh aliases for erik-borg, updated 07/07/2025
+# Zsh aliases for erik-borg, updated 08/17/2025
 # ~/.zsh_aliases
  
 # Launch llama llm
@@ -48,7 +48,7 @@ alias pbf='touch ~/.config/polybar/config.ini'
 # J for Jump
 alias j='jump'
 
-# check for updates
+# Check for updates
 alias check='checkupdates'
 
 # Exit Terminal
@@ -65,7 +65,7 @@ alias ip='ip -c a'
 alias paper='wal -qei  ~/Pictures/wallpaper'
 alias paper='wal -qei  /run/media/erik/linux_4TB/linuxBackups/home/erik/Pictures/wallpaper/'
  
-# check open ports
+# Check open ports
 alias ports="ss -r -t -p"
 
 # Restorre Wallpaper 
@@ -152,7 +152,7 @@ alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
-# Recent Installed Packages
+# Recently Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 
@@ -208,6 +208,7 @@ alias update-fc='sudo fc-cache -fv'
 
 # Copy/paste all content of /etc/skel over to home folder - backup of config created - beware
 alias skel='cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~'
+
 # Backup contents of /etc/skel to hidden backup folder in home/user
 alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
@@ -259,6 +260,7 @@ alias nconfgrub="sudo vim /boot/grub/grub.cfg"
 # Gpg
 # Verify signature for isos
 alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
+
 # Receive the key of a developer
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 

@@ -95,19 +95,19 @@ EOF
 
   "Set monitor Right")
     remove_span_entry
-    update_monitor_entry "[xin_0]" "$IMAGE_0" "$MODE"
+    update_monitor_entry "[xin_1]" "$IMAGE_0" "$MODE"
     notify-send "Wallpaper set:" "$(basename "$IMAGE_0"), Right Monitor, $MODE_NAME"
     ;;
 
   "Set monitor Center")
     remove_span_entry
-    update_monitor_entry "[xin_1]" "$IMAGE_0" "$MODE"
+    update_monitor_entry "[xin_2]" "$IMAGE_0" "$MODE"
     notify-send "Wallpaper set:" "$(basename "$IMAGE_0"), Center Monitor, $MODE_NAME"
     ;;
 
   "Set monitor Left")
     remove_span_entry
-    update_monitor_entry "[xin_2]" "$IMAGE_0" "$MODE"
+    update_monitor_entry "[xin_0]" "$IMAGE_0" "$MODE"
     notify-send "Wallpaper set:" "$(basename "$IMAGE_0"), Left Monitor, $MODE_NAME"
     ;;
 esac
