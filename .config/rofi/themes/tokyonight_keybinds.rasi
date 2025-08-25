@@ -70,7 +70,7 @@ textbox {
 
 listview {
   padding      : 4px 0px;
-  margin       : 10px 100px;
+  margin       : 10px 60px;
   lines        : 12;
   columns      : 1;
   scrollbar    : false;
@@ -79,8 +79,9 @@ listview {
 }
 
 element {
-  padding : 4px 8px;
-  spacing : 8px;
+  padding : 4px 40px;
+  spacing : 20px;
+  // spacing : 8px;
 }
 
 element normal urgent {

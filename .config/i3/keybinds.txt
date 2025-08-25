@@ -1,0 +1,42 @@
+:~~~~~~~~~~~~~~~~~~~~~~~~~~ i3 Keybindings ~~~~~~~~~~~~~~~~~~~~~~~~:
+~~~~~ Win = Mod ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Alt = Mod1~~~~~~
+archlinux-logout | Mod+Shift+e
+archlinux-logout | Mod+X
+restart i3 | Mod+Shift+r
+reload i3 config | Mod+Shift+c
+kill | Mod+Shift+q
+kill | Mod+q
+archlinux-tweak-tool | Control+Mod1+e
+kitty | Mod+Return
+alacritty | Mod+Shift+Return
+xfce4-terminal | F12
+taskmanager | Control+Shift+Escape
+settings-manager | Control+Mod1+m
+cliphist add | Control+Mod1+c
+cliphist out | Control+Mod1+v
+cliphist sel | Control+Mod1+s
+arcolinux-logout | Control+Mod1+k
+arcolinux-logout | Control+Mod1+l
+pavuControl | Control+Mod1+u
+appfinder | Control+Mod1+a
+pamac-manager | Control+Mod1+p
+keepassxc | Control+Shift+k
+chatgpt | Mod+c
+chromium  | Mod+F1
+virt-manager | Mod+v
+grayjay | Mod+g
+zen-browser | Mod+F3
+brave | Mod+w
+chromium | Control+Mod1+g
+thunar | Mod+F2
+dmenu | Control+Shift+d
+thunderbird | Mod+F4
+darktable | Mod+F5
+gimp | Mod+F6
+vscodium | Mod+F7
+geany | Mod+F8
+spotify | Mod+F10
+ranger | Mod+Mod1+r
+wikipedia  | Control+Mod+w
+xfce4-screenshooter | Control+Print
+xkill | Mod+esc
