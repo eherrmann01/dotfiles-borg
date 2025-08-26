@@ -23,7 +23,7 @@ pamac-manager | Control+Mod1+p
 keepassxc | Control+Shift+k
 chatgpt | Mod+c
 chromium  | Mod+F1
-virt-manager | Mod+v
+neovim | Mod+v
 grayjay | Mod+g
 zen-browser | Mod+F3
 brave | Mod+w

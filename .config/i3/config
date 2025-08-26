@@ -393,7 +393,7 @@ bindsym control+mod1+s exec --no-startup-id ~/bin/scripts/shell_scripts/cliphist
 # bindsym control+mod1+k exec --no-startup-id arcolinux-logout
 bindsym control+mod1+l exec --no-startup-id arcolinux-logout
 # Keybinds menu
-bindsym control+mod1+k exec --no-startup-id ~/bin/scripts/shell_scripts/keybinds_rofi.sh
+bindsym control+k exec --no-startup-id ~/bin/scripts/shell_scripts/keybinds_rofi.sh
 # Pulseaudio volume control
 bindsym control+mod1+u exec --no-startup-id pavucontrol
 # Xfce-appfinder
@@ -409,10 +409,12 @@ bindsym $mod+c workspace $ws0; exec --no-startup-id "/usr/bin/openai-chatgpt-nat
 # Chromium
 bindsym $mod+F1 exec --no-startup-id chromium ;focus
 # Virt-manaver
-bindsym $mod+v exec --no-startup-id virt-manager
+# bindsym $mod+v exec --no-startup-id virt-manager
+# NeoVim
+bindsym $mod+v exec --no-startup-id kitty -e "nvim";focus 
 # Grayjay video subscription player
 bindsym $mod+g exec --no-startup-id grayjay
-# Brave
+# Web browsers
 bindsym $mod+F3 exec --no-startup-id zen-browser;focus
 bindsym $mod+w exec --no-startup-id brave;focus
 # Chromium
