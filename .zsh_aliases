@@ -8,9 +8,6 @@
 # Zsh aliases for erik-borg, updated 08/17/2025
 # ~/.zsh_aliases
  
-# Launch llama llm
-alias llm='ollama run llama3.1'
-
 # Jump to scripts directory
 alias script='cd ~/bin/scripts/shell_scripts/'
 
@@ -18,7 +15,8 @@ alias script='cd ~/bin/scripts/shell_scripts/'
 alias rm='trash-put'
 
 # Batman (syntax hilighting for man pages)
-alias man='batman'
+alias man='tldr'
+alias Man='batman'
 
 # Bat instead of less
 alias less='bat'

@@ -29,11 +29,12 @@ white = "#dcdccc"
 yellow = "#c4a000"
 
 [colors.primary]
-background = "0x000000"
+# background = "0x1c1f24"
+background = "#193a51"
 foreground = "#F9F9F9"
 
 [font]
-size = 16.0
+size = 17.0
 
 [font.bold]
 family = "Ubuntu Mono"
@@ -59,4 +60,4 @@ key = "F11"
 history = 50000
 
 [window]
-opacity = 0.70
+opacity = 0.90

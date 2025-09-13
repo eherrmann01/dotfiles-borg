@@ -16,7 +16,9 @@ choice=$(awk -F '|' '{
 }' "$KEYBINDS" \
 | sort -f -k1,1 \
 | column -t -s $'\t' \
-| rofi -dmenu -i -p "i3 Keybinds" -theme ~/.config/rofi/themes/tokyonight_keybinds.rasi)
+| rofi -dmenu -i -p "i3 Keybinds" -theme ~/.config/rofi/themes/keybinds_app.rasi)
+# | rofi -dmenu -i -p "i3 Keybinds" -theme ~/.config/rofi/themes/tokyonight_keybinds.rasi)
+# | rofi -dmenu -i -p "i3 Keybinds" -theme ~/.config/rofi/themes/appmenu.rasi)
 
 # Extract the *real* action (3rd column) and run it
 #if [[ -n "$choice" ]]; then

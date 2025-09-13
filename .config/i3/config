@@ -191,6 +191,8 @@ for_window [window_role="setup"] floating enable
 for_window [class="Gnome-terminal"] focus
 for_window [class="Termite"] focus
 for_window [class="Terminator"] focus
+# Move Darktable preview window to ws2
+for_window [title="^darktable - darkroom preview$"] move to workspace 2
 ## Border control ##
 hide_edge_borders both
 bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
@@ -353,11 +355,12 @@ exec_always --no-startup-id numlockx on
 exec_always --no-startup-id /usr/bin/pasystray
 #exec --no-startup-id volumeicon
 # set volume balance
-exec_always --no-startup-id pactl set-sink-volume 0 60% 50%
+# exec_always --no-startup-id pactl set-sink-volume 0 50% 60%
+exec_always --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo 50% 50%
 # Clipman
 exec --no-startup-id xfce4-clipman
 # Protonmail
-exec_always --no-startup-id protonmail-bridge --no-window
+# exec_always --no-startup-id protonmail-bridge --no-window
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 # Mousefix
@@ -417,17 +420,16 @@ bindsym $mod+g exec --no-startup-id grayjay
 # Web browsers
 bindsym $mod+F3 exec --no-startup-id zen-browser;focus
 bindsym $mod+w exec --no-startup-id brave;focus
-# Chromium
-bindsym control+mod1+g exec --no-startup-id chromium;focus
 # Open file manager
 bindsym $mod+F2 exec --no-startup-id thunar;focus
+bindsym $mod+e exec --no-startup-id thunar;focus
 # Dmenu cliboard manager
 bindsym control+shift+d exec "$(clipmenu | dmenu)" 
 # Thunderbird mail
 bindsym $mod+F4 exec --no-startup-id thunderbird;focus
 # Darktable
-bindsym $mod+F5 exec --no-startup-id flatpak run org.darktable.Darktable;focus
-# bindsym $mod+F5 exec --no-startup-id /usr/bin/darktable;focus
+# bindsym $mod+F5 exec --no-startup-id flatpak run org.darktable.Darktable;focus
+bindsym $mod+F5 exec --no-startup-id /usr/bin/darktable;focus
 # Gimp
 bindsym $mod+F6 exec --no-startup-id gimp;focus
 # VSCodium
