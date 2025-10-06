@@ -24,7 +24,14 @@ case "$1" in
   add) highlight && write ;;
   out) output && write ;;
   sel) sel ;;
-  *) printf "$0 | File: $histfile\n\nadd - copies primary selection to clipboard, and adds to history file\nout - pipe commands to copy output to clipboard, and add to history file\nsel - select from history file with dmenu and recopy!\n" ; exit 0 ;;
+  clear)
+    [ -f "$histfile" ] && rm "$histfile" && notify-send "Clipboard history cleared!" || notify-send "No history file found."
+    ;; 
+  *)
+  printf "$0 | File: $histfile\n\nadd - copies primary selection to clipboard, and adds to history file\nout - pipe commands to copy output to clipboard, and add to history file\nsel - select from history file with dmenu and recopy!\nclear - delete the clipboard history file\n"
+  exit 0 
+  ;;
 esac
 
-notify-send -h string:fgcolor:#2e3440 "$notification"
+[ -n "$notification" ] && notify-send -h string:fgcolor:#2e3440 "$notification"
+

@@ -392,6 +392,8 @@ bindsym control+mod1+c exec --no-startup-id ~/bin/scripts/shell_scripts/cliphist
 bindsym control+mod1+v exec --no-startup-id ~/bin/scripts/shell_scripts/cliphist.sh out
 # Cliphist paste
 bindsym control+mod1+s exec --no-startup-id ~/bin/scripts/shell_scripts/cliphist.sh sel
+# Cliphist clear
+bindsym control+shift+c exec --no-startup-id ~/bin/scripts/shell_scripts/cliphist.sh clear
 # Arcolinux-logout
 # bindsym control+mod1+k exec --no-startup-id arcolinux-logout
 bindsym control+mod1+l exec --no-startup-id arcolinux-logout

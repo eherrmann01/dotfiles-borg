@@ -56,7 +56,6 @@ require('lazy').setup {
     require 'plugins.image',
     require 'plugins.indent-blankline',
     require 'plugins.lint',
-    require 'plugins.lspconfig',
     require 'plugins.lualine',
     require 'plugins.mason',
     require 'plugins.mini',

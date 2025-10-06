@@ -6,8 +6,7 @@ configuration {
     case-sensitive: false;    
 }
 
-
-
+@theme "/home/erik/.config/rofi/themes/rofi_appmenu.rasi"
 
 //@theme "/usr/share/rofi/themes/android_notification.rasi"
 
@@ -41,4 +40,5 @@ configuration {
 
 //@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
 
-@theme "/home/erik/.config/rofi/themes/glue_pro_blue_edh.rasi"
+// @theme "/home/erik/.config/rofi/themes/glue_pro_blue_edh.rasi"
+

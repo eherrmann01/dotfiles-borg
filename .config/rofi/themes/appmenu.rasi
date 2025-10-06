@@ -5,11 +5,12 @@
 // | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_   
 // |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)  
 //
-// Styling file for Appmenu, updated 06/14/2025
+// Styling file for Appmenu, updated 10/06/2025
 // ~/.config/rofi/themes/appmenu.rasi
 
 * {
-  font:   "Iosevka Nerd Font Medium 11";
+  // font:   "Iosevka Nerd Font Medium 11";
+  font:   "Monospace 12";
 
   bg0     : #1a1b26;
   bg1     : #1f2335;
@@ -48,7 +49,7 @@ element-icon, element-text, scrollbar {
 window {
   // location : northwest;
   location : center;
-  width    : 190;
+  width    : 250px;
   x-offset : 4px;
   y-offset : 26px;
   background-color: @gray;

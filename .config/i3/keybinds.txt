@@ -1,43 +1,44 @@
 :~~~~~~~~~~~~~~~~~~~~~~~~~~ i3 Keybindings ~~~~~~~~~~~~~~~~~~~~~~~~:
 ~~~~~ Win = Mod ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Alt = Mod1~~~~~~
+alacritty | Mod+Shift+Return
+appfinder | Control+Mod1+a
 archlinux-logout | Mod+Shift+e
 archlinux-logout | Mod+X
-restart i3 | Mod+Shift+r
-reload i3 config | Mod+Shift+c
-kill | Mod+Shift+q
-kill | Mod+q
 archlinux-tweak-tool | Control+Mod1+e
-kitty | Mod+Return
-alacritty | Mod+Shift+Return
-xfce4-Terminal | F12
-taskmanager | Control+Shift+Escape
-settings-Manager | Control+Mod1+m
-cliphist Add | Control+Mod1+c
-cliphist Out | Control+Mod1+v
-cliphist Sel | Control+Mod1+s
 arcolinux-Logout | Control+Mod1+k
 arcolinux-Logout | Control+Mod1+l
-pavuControl | Control+Mod1+u
-Picom toggle | Control+mod1+o
-appfinder | Control+Mod1+a
-pamac-Manager | Control+Mod1+p
-keepassxc | Control+Shift+k
+brave | Mod+e
+brave | Mod+w
 chatgpt | Mod+c
 chromium  | Mod+F1
-neovim | Mod+v
-grayjay | Mod+g
-zen-Browser | Mod+F3
-brave | Mod+w
-brave | Mod+e
-file Manager | Mod+F2
-dmenu | Control+Shift+d
-thunderbird | Mod+F4
+cliphist Copy | Control+Mod1+c
+cliphist Add | Control+Mod1+v
+cliphist Sel | Control+Mod1+s
+cliphist Clear | Control+Shift+c
 darktable | Mod+F5
-gimp | Mod+F6
-vscodium | Mod+F7
+dmenu | Control+Shift+d
+file Manager | Mod+F2
 geany | Mod+F8
-spotify | Mod+F10
+gimp | Mod+F6
+grayjay | Mod+g
+keepassxc | Control+Shift+k
+kill | Mod+q
+kill | Mod+Shift+q
+kitty | Mod+Return
+neovim | Mod+v
+pamac-Manager | Control+Mod1+p
+pavuControl | Control+Mod1+u
+Picom toggle | Control+mod1+o
 ranger | Mod+Mod1+r
+reload i3 config | Mod+Shift+c
+restart i3 | Mod+Shift+r
+settings-Manager | Control+Mod1+m
+spotify | Mod+F10
+taskmanager | Control+Shift+Escape
+thunderbird | Mod+F4
+vscodium | Mod+F7
 wikipedia  | Control+Mod+w
 xfce4-Screenshooter | Control+Print
+xfce4-Terminal | F12
 xkill | Mod+esc
+zen-Browser | Mod+F3
