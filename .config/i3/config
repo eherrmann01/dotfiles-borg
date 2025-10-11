@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# i3 configuration file for erik-borg - updated 07/02/2025
+# i3 configuration file for erik-borg - updated 10/08/2025
 # ~/config/i3/config
 
 ## Set Super key / Define movement keys ##
@@ -86,6 +86,10 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
+#Scratchpads
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
 
 ## Move focused window ##
 bindsym $mod+Shift+$left move left
@@ -321,14 +325,14 @@ bindsym $mod+q kill
 font pango:Noto Mono Regular 13
 
 ## Programs to load at startup ##
+# Launch keepass, move to scratchpad
+exec_always --no-startup-id ~/bin/scripts/shell_scripts/keepass_scratchpad.sh
 # Run floating.py to resize windows when floating
 exec no-startup-id ~/bin/scripts/python_scripts/floating.py
 # Start Nitrogen
 exec --no-startup-id i3-msg exec 'nitrogen --restore'
 # Start browser on ws1 
 exec --no-startup-id bash -c 'sleep 1 && i3-msg "workspace $ws1; exec brave"'
-# Start Keepass on ws8
-exec --no-startup-id bash -c 'sleep 3 && i3-msg "workspace $ws8; exec keepassxc"'
 # Start Deskflow
 # exec --no-startup-id i3-msg 'workspace 1; exec  /usr/bin/deskflow-server -f --debug INFO --name borg --address :24800 -c /home/erik/.config/Deskflow/deskflow-server.conf' 
 # Autotiling
@@ -373,7 +377,7 @@ exec_always --no-startup-id ~/bin/scripts/edit_scripts/nightrc &
 # ommitted next line to get super key to bring up the menu in xfce and avoid error then in i3
 # IF xfsettingsd is activated you can not change themes
 #exec --no-startup-id xfsettingsd &
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+# exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 ## Application keyboard shortcuts ##
 # ArcoLinux Tweak Tool

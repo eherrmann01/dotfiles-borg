@@ -16,9 +16,12 @@ write() {
   grep -Fxq "$multiline" "$histfile" || echo "$multiline" >> "$histfile"
   notification=$(echo \"$multiline\") ;}
 
-sel() {
-    selection=$(tac "$histfile" | rofi -dmenu -l 5 -i -p "Clipboard history:" -nb '#191919' -nf '#5fb1ba' -sb '#5fb1ba' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14')
-  [ -n "$selection" ] && echo "$selection" | sed "s/$placeholder/\n/g" | xclip -i -selection clipboard && notification="Copied to clipboard!" ;}
+ sel() {
+     # selection=$(tac "$histfile" | rofi -dmenu -l 5 -i -p "Clipboard history:" -nb '#191919' -nf '#5fb1ba' -sb '#5fb1ba' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14')
+     selection=$(tac "$histfile" | rofi -dmenu -l 5 -i -p "Clipboard history:" -nb '#ffffff' -nf '#5fb1ba' -sb '#5fb1ba' -sf '#ffffff' -fn 'NotoMonoRegular:bold:pixelsize=14')
+   [ -n "$selection" ] && echo "$selection" | sed "s/$placeholder/\n/g" | xclip -i -selection clipboard && notification="Copied to clipboard!"   
+
+}
 
 case "$1" in
   add) highlight && write ;;
@@ -33,5 +36,5 @@ case "$1" in
   ;;
 esac
 
-[ -n "$notification" ] && notify-send -h string:fgcolor:#2e3440 "$notification"
+[ -n "$notification" ] && notify-send -h string:fgcolor:#ffffff "$notification"
 

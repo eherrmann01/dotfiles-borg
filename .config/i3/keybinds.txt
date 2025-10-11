@@ -32,6 +32,8 @@ Picom toggle | Control+mod1+o
 ranger | Mod+Mod1+r
 reload i3 config | Mod+Shift+c
 restart i3 | Mod+Shift+r
+scratchpad add | Mod+Shift+minus
+scratchpad show | Mod+minus
 settings-Manager | Control+Mod1+m
 spotify | Mod+F10
 taskmanager | Control+Shift+Escape
