@@ -2,6 +2,7 @@
 ~~~~~ Win = Mod ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Alt = Mod1~~~~~~
 alacritty | Mod+Shift+Return
 appfinder | Control+Mod1+a
+appfinder | Mod1+F3
 archlinux-logout | Mod+Shift+e
 archlinux-logout | Mod+X
 archlinux-tweak-tool | Control+Mod1+e
@@ -14,7 +15,7 @@ chromium  | Mod+F1
 cliphist Copy | Control+Mod1+c
 cliphist Add | Control+Mod1+v
 cliphist Sel | Control+Mod1+s
-cliphist Clear | Control+Shift+c
+cliphist Clear | Control+Mod1+l
 darktable | Mod+F5
 dmenu | Control+Shift+d
 file Manager | Mod+F2
