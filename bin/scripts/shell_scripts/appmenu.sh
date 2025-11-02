@@ -52,14 +52,12 @@ Back\n" | $DMENU)
 
 # Rinse and repeat...
     "Audio / Video")
-        choice=$(printf "Grayjay\n\
-KdenLive\n\
+        choice=$(printf "KdenLive\n\
 PulseAudio\n\
 VLC\n\
 Back\n" | $DMENU)
 
     case "$choice" in 
-        "Grayjay") exec /usr/bin/grayjay ;;
         "KdenLive") exec /usr/bin/kdenlive ;;
         "PulseAudio") exec /usr/bin/pavucontrol ;;
         "VLC") exec vlc ;;
@@ -71,13 +69,11 @@ Back\n" | $DMENU)
         choice=$(printf "Geany\n\
 NeoVim\n\
 Virt-Manager\n\
-VSCodium\n\
 Back\n" | $DMENU)
     case "$choice" in 
         "Geany") exec geany ;;
         "NeoVim") exec kitty -e nvim ;;
         "Virt-Manager") exec virt-manager ;;
-        "VSCodium") exec vscodium ;;
         "Back") exec "$0" ;;
     esac
     ;;

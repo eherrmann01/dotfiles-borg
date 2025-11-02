@@ -345,7 +345,7 @@ exec --no-startup-id clipmenud
 
 ## Tray applications ##
 # Snixembed - for tray applicatioons
-exec_always --no-startup-id snixembed &
+# exec_always --no-startup-id snixembed &
 # Authentication dialog
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # Bluetooth
@@ -416,8 +416,6 @@ bindsym $mod+c workspace $ws0; exec --no-startup-id "/usr/bin/openai-chatgpt-nat
 bindsym $mod+F1 exec --no-startup-id chromium ;focus
 # NeoVim
 bindsym $mod+v exec --no-startup-id kitty -e "nvim";focus 
-# Grayjay video subscription player
-bindsym $mod+g exec --no-startup-id grayjay
 # Web browsers
 bindsym $mod+F3 exec --no-startup-id zen-browser;focus
 bindsym $mod+w exec --no-startup-id brave;focus

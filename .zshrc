@@ -135,3 +135,9 @@ fastfetch
 
 export PATH="$HOME/bin/scripts/shell_scripts:$PATH"
 
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/erik/.dart-cli-completion/zsh-config.zsh ]] && . /home/erik/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

@@ -21,7 +21,6 @@ dmenu | Control+Shift+d
 file Manager | Mod+F2
 geany | Mod+F8
 gimp | Mod+F6
-grayjay | Mod+g
 keepassxc | Control+Shift+k
 kill | Mod+q
 kill | Mod+Shift+q
@@ -39,7 +38,6 @@ settings-Manager | Control+Mod1+m
 spotify | Mod+F10
 taskmanager | Control+Shift+Escape
 thunderbird | Mod+F4
-vscodium | Mod+F7
 wikipedia  | Control+Mod+w
 xfce4-Screenshooter | Control+Print
 xfce4-Terminal | F12
