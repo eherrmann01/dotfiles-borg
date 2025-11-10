@@ -296,3 +296,4 @@ fastfetch
 #hfetch
 # install lolcat
 #sfetch | lolcat
+export PIPX_DEFAULT_PYTHON=/usr/bin/python3.11

@@ -141,3 +141,4 @@ export PATH="$HOME/bin/scripts/shell_scripts:$PATH"
 [[ -f /home/erik/.dart-cli-completion/zsh-config.zsh ]] && . /home/erik/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+export PIPX_DEFAULT_PYTHON=/usr/bin/python3.11

@@ -32,6 +32,7 @@ case "$category" in
 Bitwarden\n\
 Calculator\n\
 Flameshot\n\
+Ollama\n\
 Proton Pass\n\
 Unit Converter\n\
 Wikipedia\n\
@@ -42,6 +43,7 @@ Back\n" | $DMENU)
         "Artisan") exec artisan ;;
         "Bitwarden") exec bitwarden-desktop ;;
         "Flameshot") exec /usr/bin/flameshot ;;
+        "Ollama") nohup ~/bin/scripts/shell_scripts/ollama.sh >/dev/null 2>&1 & ;;
         "Proton Pass") exec /usr/bin/proton-pass ;;
         "Calculator") exec galculator ;;
         "Unit Converter") exec /bin/convertall ;;
@@ -166,7 +168,6 @@ Back\n" | $DMENU)
         choice=$(printf "Barrier\n\
 Bashtop\n\
 Deskflow\n\
-File Search\n\
 Flameshot\n\
 Gparted\n\
 LXAppearance\n\
@@ -180,7 +181,6 @@ Back\n" | $DMENU )
             "Barrier") exec barrier ;;
             "Bashtop") exec kitty -e bashtop ;;
             "Deskflow") exec deskflow ;;
-            "File Search") exec catfish ;;
             "Flameshot") exec flameshot ;;
             "Gparted") exec gparted ;;
             "LXAppearance") exec lxappearance ;;
