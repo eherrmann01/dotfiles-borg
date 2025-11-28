@@ -38,6 +38,7 @@ settings-Manager | Control+Mod1+m
 spotify | Mod+F10
 taskmanager | Control+Shift+Escape
 thunderbird | Mod+F4
+Useful Commands | Control+Mod+Space
 wikipedia  | Control+Mod+w
 xfce4-Screenshooter | Control+Print
 xfce4-Terminal | F12
