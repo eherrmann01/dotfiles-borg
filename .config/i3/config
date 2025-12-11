@@ -154,7 +154,6 @@ mode "resize" {
 
 ## Floating or tiled
 #floating enabled from some programs - find with xprop
-#for_window [class="Arcolinux-tweak-tool.py"] floating enable
 for_window [class="Bleachbit"] floating disable
 for_window [class="Blueberry.py"] floating enable
 for_window [class="Brasero"] floating disable
@@ -216,7 +215,7 @@ new_window pixel 2
 # https://github.com/Airblader/i3/tree/gaps-next
 for_window [class="^.*"] border pixel 2 
 gaps inner 8
-gaps outer 5
+gaps outer 3
 # smart_gaps off
 # smart_borders off
 set $mode_gaps Gaps: (o) outer, (i) inner

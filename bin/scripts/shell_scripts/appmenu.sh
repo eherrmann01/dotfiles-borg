@@ -6,7 +6,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Application launcher using Rofi - updated 07/19/2025
+# Application launcher using Rofi - updated 12/07/2025
 # ~/bin/scripts/appmenu.sh
 
 # Define launcher and theme.
@@ -151,15 +151,18 @@ Libre Office Draw\n\
 Libre Office Impress\n\
 Libre Office Math\n\
 Libre Office Write\n\
+OnlyOffice\n\
 Back\n" | $DMENU)
     case "$choice" in 
-        "BP Tracking") exec libreoffice --calc ~/Documents/healthcare/bp_tracking.xlsx ;;
+        # "BP Tracking") exec libreoffice --calc ~/Documents/healthcare/bp_tracking.xlsx ;;
+        "BP Tracking") exec onlyoffice-desktopeditors ~/Documents/healthcare/bp_tracking.xlsx ;;
         "Libre Office Base") exec libreoffice --base ;;
         "Libre Office Calc") exec libreoffice --calc ;;
         "Libre Office Draw") exec libreoffice --draw ;;
         "Libre Office Impress") exec libreoffice --impress ;;
         "Libre Office Math") exec libreoffice --math ;;
         "Libre Office Write") exec libreoffice --writer ;;
+        "OnlyOffice") exec onlyoffice-desktopeditors ;;
         "Back") exec "$0" ;;
     esac
     ;;
