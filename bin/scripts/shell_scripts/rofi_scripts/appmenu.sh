@@ -70,12 +70,10 @@ Back\n" | $DMENU)
     "Dev Tools")
         choice=$(printf "Geany\n\
 NeoVim\n\
-Virt-Manager\n\
 Back\n" | $DMENU)
     case "$choice" in 
         "Geany") exec geany ;;
         "NeoVim") exec kitty -e nvim ;;
-        "Virt-Manager") exec virt-manager ;;
         "Back") exec "$0" ;;
     esac
     ;;

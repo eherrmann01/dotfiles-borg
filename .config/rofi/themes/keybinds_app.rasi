@@ -27,7 +27,7 @@
   cyan    : #4abaaf;
   blue2   : #00aeff;
   white   : #ffffff;
-  gray    : #344254;
+  gray    : #344253;
   teal    : #99d1ce;
 
   accent: @teal;

@@ -21,6 +21,7 @@ dmenu | Control+Shift+d
 file Manager | Mod+F2
 geany | Mod+F8
 gimp | Mod+F6
+i3-gaps Menu | Mod+Shift+g 
 keepassxc | Control+Shift+k
 kill | Mod+q
 kill | Mod+Shift+q
@@ -43,4 +44,5 @@ wikipedia  | Control+Mod+w
 xfce4-Screenshooter | Control+Print
 xfce4-Terminal | F12
 xkill | Mod+esc
+Youtube (in Brave) | Mod+y
 zen-Browser | Mod+F3

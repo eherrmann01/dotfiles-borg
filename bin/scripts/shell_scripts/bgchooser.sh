@@ -12,6 +12,8 @@
 IMAGE_0="$1"
 CONFIG="$HOME/.config/nitrogen/bg-saved.cfg"
 BACKUP="$CONFIG.bak"
+GTK_THEME=Arc Dark zenity --whatever-you-use
+
 
 # Check for image input
 [ -z "$IMAGE_0" ] && notify-send "Wallpaper not set" "No image selected." && exit 1
